@@ -16,7 +16,9 @@ public class ElementContainer {
     }
 
     public boolean isInserted(String data){
-        container.add(data);
+        if(!container.contains(data))
+            container.add(data);
+
         return  true;
     }
 

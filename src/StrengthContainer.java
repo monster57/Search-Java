@@ -16,7 +16,8 @@ public class StrengthContainer {
     }
 
     public boolean isInserted(int strength){
-        container.add(strength);
+        if(container.contains(strength))
+            container.add(strength);
         return true;
     }
 
