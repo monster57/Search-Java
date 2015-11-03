@@ -7,6 +7,7 @@ import static org.junit.Assert.assertEquals;
  * Created by user2 on 10/31/15.
  */
 public class ConverterTest {
+    
 
     @Test
     public void shouldGiveASetOfPages(){

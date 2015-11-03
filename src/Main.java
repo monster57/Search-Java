@@ -10,7 +10,9 @@ public class Main {
         Separator separator = new Separator(data);
         List<String> pageData = separator.fetchSignatureData('p');
         List<String> queryData = separator.fetchSignatureData('q');
-        Converter converter  = new Converter(pageData , queryData);
+        ElementContainer elementContainer = new ElementContainer();
+        StrengthContainer strengthContainer = new StrengthContainer();
+        Converter converter  = new Converter(pageData , queryData , elementContainer , strengthContainer);
         List<Page> pageSet = converter.convertPageDataToSetOfPage();
         List<Query> querySet = converter.convertQueryDataToSetOfQuery();
         Search search = new Search(pageSet , querySet);

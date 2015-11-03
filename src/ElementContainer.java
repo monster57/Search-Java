@@ -22,6 +22,10 @@ public class ElementContainer {
         return  true;
     }
 
+    public void addElementToContainer(String element){
+        container.add(element);
+    }
+
     public boolean isPresentInContainer(String data){
         return container.contains(data);
     }

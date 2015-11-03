@@ -24,4 +24,8 @@ public class StrengthContainer {
     public boolean isPresentInContainer(String data){
         return container.contains(data);
     }
+
+    public void addStrengthInContainer(int strength){
+        container.add(strength);
+    }
 }

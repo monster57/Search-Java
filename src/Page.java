@@ -6,18 +6,26 @@ import java.util.Map;
  */
 public class Page {
     private String data;
+    private ElementContainer elementContainer;
+    private StrengthContainer strengthContainer;
 
-    public Page(String data) {
+    public Page(String data , ElementContainer elementContainer , StrengthContainer strengthContainer) {
         this.data = data;
+        this.elementContainer = elementContainer;
+        this.strengthContainer = strengthContainer;
     }
 
     public Map<String , Integer> getPageDataWithStrength(int maxStrength){
         String[] splitedDataBySpace = data.split(" ");
-        Map<String ,Integer> pageDatawihStrength = new HashMap<>();
+        Map<String ,Integer> pageDataWihStrength = new HashMap<>();
         for(int i=1;i<splitedDataBySpace.length;i++){
-            pageDatawihStrength.put(splitedDataBySpace[i] , maxStrength);
+            if(!strengthContainer.getContainer().contains(maxStrength))
+                strengthContainer.addStrengthInContainer(maxStrength);
+            if(!elementContainer.getContainer().contains(splitedDataBySpace[i]))
+                elementContainer.addElementToContainer(splitedDataBySpace[i]);
+            pageDataWihStrength.put(splitedDataBySpace[i], maxStrength);
             maxStrength --;
         }
-        return pageDatawihStrength;
+        return pageDataWihStrength;
     }
 }

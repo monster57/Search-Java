@@ -7,16 +7,20 @@ import java.util.List;
 public class Converter {
     private List<String> pageData;
     private List<String> queryData;
+    private ElementContainer elementContainer;
+    private  StrengthContainer strengthContainer;
 
-    public Converter(List<String> pageData, List<String> queryData) {
+    public Converter(List<String> pageData, List<String> queryData , ElementContainer elementContainer , StrengthContainer strengthContainer) {
         this.pageData = pageData;
         this.queryData = queryData;
+        this.elementContainer = elementContainer;
+        this.strengthContainer = strengthContainer;
     }
 
     public List<Page> convertPageDataToSetOfPage(){
         List<Page> pageSet = new ArrayList<>();
         for (String data : pageData) {
-            pageSet.add(new Page(data));
+            pageSet.add(new Page(data , elementContainer , strengthContainer));
         }
         return pageSet;
     }

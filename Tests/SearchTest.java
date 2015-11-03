@@ -16,9 +16,11 @@ public class SearchTest {
     public void shouldGiveAResultSetForGivenInput(){
         List<Page> pages = new ArrayList<>();
         List<Query> queries = new ArrayList<>();
-        pages.add(new Page("P Car Ford"));
-        pages.add(new Page("P Review Car Ford"));
-        pages.add(new Page("P Review Ford"));
+        StrengthContainer strengthContainer = new StrengthContainer();
+        ElementContainer elementContainer = new ElementContainer();
+        pages.add(new Page("P Car Ford" , elementContainer , strengthContainer));
+        pages.add(new Page("P Review Car Ford" , elementContainer , strengthContainer) );
+        pages.add(new Page("P Review Ford", elementContainer , strengthContainer));
         queries.add(new Query("Q Ford"));
         Search search = new Search(pages , queries);
         Map<String , Map<String ,Integer>> expected = new HashMap<>();
