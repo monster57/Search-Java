@@ -13,8 +13,10 @@ public class PageTest {
     @Test
     public void shouldGiveTheDataWithPriority(){
         Map<String , Integer> expected = new HashMap<>();
+        ElementContainer elementContainer = new ElementContainer();
+        StrengthContainer strengthContainer = new StrengthContainer();
         String data = "P ford car";
-        Page page = new Page(data);
+        Page page = new Page(data , elementContainer , strengthContainer);
         expected.put( "ford" , 3);
         expected.put( "car" , 2);
         assertEquals(expected , page.getPageDataWithStrength(3) );

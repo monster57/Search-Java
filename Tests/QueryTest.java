@@ -14,9 +14,9 @@ public class QueryTest {
     public void shouldGiveTheDataOfQueryWithPriority(){
         Map< String , Integer> expected = new HashMap<>();
         String data = "Q ford car";
-        Page page = new Page(data);
+        Query query = new Query(data);
         expected.put("ford" , 3);
         expected.put( "car" , 2);
-        assertEquals(expected , page.getPageDataWithStrength(3) );
+        assertEquals(expected , query.getQueryDataWithStrength(3) );
     }
 }
