@@ -15,4 +15,5 @@ public class ElementContainerTest {
         elementContainer.addElementToContainer(element);
         assertTrue(elementContainer.getContainer().contains(element));
     }
+
 }
