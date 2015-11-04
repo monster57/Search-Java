@@ -11,7 +11,7 @@ public class ElementContainerTest {
     public void shouldAddElementToContainerWhenElementIsNotPresentInContainer(){
         ElementContainer elementContainer = new ElementContainer();
         String element = "hello";
-        
+
         elementContainer.addElementToContainer(element);
         assertTrue(elementContainer.getContainer().contains(element));
     }
