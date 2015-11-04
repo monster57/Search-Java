@@ -28,7 +28,7 @@ public class Converter {
     public List<Query> convertQueryDataToSetOfQuery(){
         List<Query> querySet = new ArrayList<>();
         for (String data : queryData) {
-            querySet.add(new Query(data));
+            querySet.add(new Query(data , elementContainer , strengthContainer));
         }
         return querySet;
     }

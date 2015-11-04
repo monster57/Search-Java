@@ -21,7 +21,7 @@ public class SearchTest {
         pages.add(new Page("P Car Ford" , elementContainer , strengthContainer));
         pages.add(new Page("P Review Car Ford" , elementContainer , strengthContainer) );
         pages.add(new Page("P Review Ford", elementContainer , strengthContainer));
-        queries.add(new Query("Q Ford"));
+        queries.add(new Query("Q Ford" , elementContainer , strengthContainer));
         Search search = new Search(pages , queries);
         Map<String , Map<String ,Integer>> expected = new HashMap<>();
         Map <String , Integer> result = new HashMap<>();

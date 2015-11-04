@@ -47,8 +47,8 @@ public class ConverterTest {
     public void shouldGiveASetOfQueries(){
         List<Query> actual = converter.convertQueryDataToSetOfQuery();
         List<Query> expected = new ArrayList<>();
-        expected.add(new Query("Q Ford Car"));
-        expected.add(new Query("Q Review Car"));
+        expected.add(new Query("Q Ford Car" , elementContainer , strengthContainer));
+        expected.add(new Query("Q Review Car" , elementContainer , strengthContainer));
         for (int i = 0; i<expected.size(); i++){
             assertEquals(expected.get(i).getQueryDataWithStrength(strength) ,actual.get(i).getQueryDataWithStrength(strength) );
         }
