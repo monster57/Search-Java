@@ -28,4 +28,12 @@ public class StrengthContainer {
     public void addStrengthInContainer(int strength){
         container.add(strength);
     }
+
+    public int getStrengthByValue(int value){
+        for (Integer strength : container) {
+            if(strength == value)
+                return strength;
+        }
+        return Integer.parseInt(null);
+    }
 }

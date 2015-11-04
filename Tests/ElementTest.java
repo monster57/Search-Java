@@ -9,7 +9,7 @@ public class ElementTest {
 
     @Test
     public void shouldGetTheElementValueFromElement(){
-        String value = "hello"
+        String value = "hello";
         Element element = new Element(value);
         assertEquals(element.getValue() , value);
     }
