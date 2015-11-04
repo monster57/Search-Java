@@ -33,7 +33,7 @@ public class ElementContainer {
     public String getElementByValue(String value){
         for (String element : container) {
             if(element == value)
-                return element
+                return element;
         }
         return null;
     }
