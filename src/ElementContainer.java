@@ -29,4 +29,12 @@ public class ElementContainer {
     public boolean isPresentInContainer(String data){
         return container.contains(data);
     }
+
+    public String getElementByValue(String value){
+        for (String element : container) {
+            if(element == value)
+                return element
+        }
+        return null;
+    }
 }

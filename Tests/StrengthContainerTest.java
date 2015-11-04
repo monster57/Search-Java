@@ -25,7 +25,7 @@ public class StrengthContainerTest {
 
 
     @Test
-    public void shouldGetStrengthFromCOntainerWHenValueIsGiven(){
+    public void shouldGetStrengthFromContainerWhenValueIsGiven(){
         assertEquals(strengthContainer.getStrengthByValue(strength) , strength);
     }
 }
